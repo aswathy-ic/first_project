@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns:sockets="http://www.mulesoft.org/schema/mule/sockets"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/sockets http://www.mulesoft.org/schema/mule/sockets/current/mule-sockets.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<sockets:listener-config name="Sockets_Listener_config" doc:name="Sockets Listener config" doc:id="859fb35e-884f-460f-892e-74a16a5a0675" >
+		<sockets:tcp-listener-connection host="localhost" port="8081" />
+	</sockets:listener-config>
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="be8fc2c2-8c3a-4fb7-9aed-b835d65935d0" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="jerkin_project_sys_apiFlow" doc:id="059d5e16-cff9-4656-9a6e-1e396c536351" >
+		<http:listener doc:name="Listener" doc:id="a4d866bf-905d-4133-b615-ce572679d592" config-ref="HTTP_Listener_config" path="/path"/>
+		<ee:transform doc:name="Transform Message" doc:id="eae17c4e-45f6-47d6-868f-1d650514767b" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	"message":"Happy onam"
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+</mule>
