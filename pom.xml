@@ -18,13 +18,13 @@
 		<app.runtime>4.9.0</app.runtime>
 		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
 	</properties>
-	 <distributionManagement>
-        <repository>
-            <id>anypoint-exchange-v3</id>
-            <name>Anypoint Exchange</name>
-            <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${anypoint.organizationId}/maven</url>
-        </repository>
-    </distributionManagement>
+	<distributionManagement>
+		<repository>
+			<id>anypoint-exchange-v3</id>
+			<name>Anypoint Exchange</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${anypoint.organizationId}/maven</url>
+		</repository>
+	</distributionManagement>
 
 	<build>
 		<plugins>
@@ -51,6 +51,10 @@
 						<businessGroup>${business}</businessGroup>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
+						<groupId>com.mycompany</groupId>
+						<artifactId>jerkin_project_sys_api</artifactId>
+						<version>1.0.0-SNAPSHOT</version>
+						<packaging>mule-application</packaging>
 					</cloudhub2Deployment>
 					<classifier>mule-application</classifier>
 				</configuration>
