@@ -32,17 +32,23 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<deploymentType>cloudhub2</deploymentType>
-					<applicationName>${appname}</applicationName>
-					<environment>${env}</environment>
-					<target>CH2</target>
-					<region>us-east-1</region>
-					<anypointPlatformClientId>${anypoint.client.id}</anypointPlatformClientId>
-					<anypointPlatformClientSecret>${anypoint.client.secret}</anypointPlatformClientSecret>
-					<workerType>${vCore}</workerType>
-					<workers>${workers}</workers>
+					<cloudhub2Deployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<provider>MC</provider>
+						<muleVersion>${mule.version}</muleVersion>
+						<username>${anypoint.username}</username>
+						<password>${anypoint.password}</password>
+						<environment>${env}</environment>
+						<target>${anypoint.ch2.target}</target>
+						<applicationName>${appname}</applicationName>
+						<businessGroup>${business}</businessGroup>
+						<replicas>1</replicas>
+						<vCores>0.1</vCores>
+					</cloudhub2Deployment>
+					<classifier>mule-application</classifier>
 				</configuration>
 			</plugin>
+
 
 		</plugins>
 	</build>
