@@ -52,7 +52,6 @@
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
 					</cloudhub2Deployment>
-					<skipDeploymentVerification>true</skipDeploymentVerification>
 					<classifier>mule-application</classifier>
 				</configuration>
 			</plugin>
