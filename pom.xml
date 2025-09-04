@@ -47,6 +47,7 @@
 						<groupId>com.mycompany</groupId>
 						<artifactId>jerkin_project_sys_api</artifactId>
 						<version>1.0.0-SNAPSHOT</version>
+						<packaging>mule-application</packaging>
 					</cloudhub2Deployment>
 					<classifier>mule-application</classifier>
 				</configuration>
