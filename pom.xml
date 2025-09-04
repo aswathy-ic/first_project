@@ -44,9 +44,8 @@
 						<businessGroup>${business}</businessGroup>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
-						
-						<skipDeploymentVerification>true</skipDeploymentVerification>
 					</cloudhub2Deployment>
+					<skipDeploymentVerification>true</skipDeploymentVerification>
 					<classifier>mule-application</classifier>
 				</configuration>
 			</plugin>
