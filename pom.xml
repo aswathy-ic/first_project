@@ -6,7 +6,7 @@
 
 	<groupId>com.mycompany</groupId>
 	<artifactId>jerkin_project_sys_api</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 
 	<name>jerkin_project_sys_api</name>
@@ -21,7 +21,7 @@
 	</properties>
 	<distributionManagement>
 		<repository>
-			<id>anypoint-exchange-v3</id>
+			<id>anypoint-exchange</id>
 			<name>Anypoint Exchange</name>
 			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${anypoint.organizationId}/maven</url>
 		</repository>
@@ -57,7 +57,17 @@
 				</configuration>
 			</plugin>
 
-
+<plugin>
+                <groupId>org.mule.tools.maven</groupId>
+                <artifactId>exchange-mule-maven-plugin</artifactId>
+                <version>${exchange.plugin.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <username>${anypoint.username}</username>
+                    <password>${anypoint.password}</password>
+                    <organization>${anypoint.organizationId}</organization>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 
