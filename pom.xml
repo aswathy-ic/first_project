@@ -16,7 +16,6 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.9.0</app.runtime>
-		<exchange.plugin.version>0.0.23</exchange.plugin.version>
 		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
 	</properties>
 	<distributionManagement>
@@ -37,7 +36,7 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
+				<version>3.9.0</version>
 				<extensions>true</extensions>
 				<configuration>
 					<cloudhub2Deployment>
@@ -47,7 +46,6 @@
 						<username>${anypoint.username}</username>
 						<password>${anypoint.password}</password>
 						<environment>${env}</environment>
-						<target>${anypoint.ch2.target}</target>
 						<applicationName>${appname}</applicationName>
 						<businessGroup>${business}</businessGroup>
 						<replicas>1</replicas>
@@ -56,18 +54,6 @@
 					<classifier>mule-application</classifier>
 				</configuration>
 			</plugin>
-
-<plugin>
-                <groupId>org.mule.tools.maven</groupId>
-                <artifactId>exchange-mule-maven-plugin</artifactId>
-                <version>${exchange.plugin.version}</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <username>${anypoint.username}</username>
-                    <password>${anypoint.password}</password>
-                    <organization>${anypoint.organizationId}</organization>
-                </configuration>
-            </plugin>
 		</plugins>
 	</build>
 
