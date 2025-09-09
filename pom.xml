@@ -44,8 +44,8 @@
 						<provider>MC</provider>
 						<target>Cloudhub-US-East-2</target>
 						<muleVersion>${app.runtime}</muleVersion>
-						<username>${anypoint.username}</username>
-						<password>${anypoint.password}</password>
+						<username>AswathySree_ic</username>
+						<password>Aswa@2002</password>
 						<environment>${anypoint.env}</environment>
 						<applicationName>${appname}</applicationName>
 						<businessGroup>${business}</businessGroup>
