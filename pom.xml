@@ -50,7 +50,7 @@
 						<username>AswathySree_ic</username>
 						<password>Aswa@2002</password>
 						<environment>${anypoint.env}</environment>
-						<applicationName>${appname}</applicationName>
+						<applicationName>${app.name}</applicationName>
 						<businessGroup>${business}</businessGroup>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
