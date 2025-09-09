@@ -18,6 +18,13 @@
 		<app.runtime>4.9.0</app.runtime>
 		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
 	</properties>
+	<distributionManagement>
+		<repository>
+			<id>anypoint-exchange</id>
+			<name>Anypoint Exchange</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/890e72fd-6fba-4cc1-9404-681bca0af50d/maven</url>
+		</repository>
+	</distributionManagement>
 
 	<build>
 		<plugins>
@@ -29,16 +36,17 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>3.9.0</version>
+				<version>4.3.0</version>
 				<extensions>true</extensions>
 				<configuration>
 					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<provider>MC</provider>
+						<target>Cloudhub-US-East-2</target>
 						<muleVersion>${app.runtime}</muleVersion>
 						<username>${anypoint.username}</username>
 						<password>${anypoint.password}</password>
-						<environment>${env}</environment>
+						<environment>${anypoint.env}</environment>
 						<applicationName>${appname}</applicationName>
 						<businessGroup>${business}</businessGroup>
 						<replicas>1</replicas>
