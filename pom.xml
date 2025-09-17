@@ -19,7 +19,7 @@
 		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
 		<app.name>myfirst</app.name>
 		<anypoint.env>Sandbox</anypoint.env>
-		<business>Inheritcloud</business>
+		<business>InheritCloud</business>
 	</properties>
 	<distributionManagement>
 		<repository>
