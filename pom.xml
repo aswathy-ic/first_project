@@ -4,12 +4,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.mycompany</groupId>
+	<groupId>890e72fd-6fba-4cc1-9404-681bca0af50d</groupId>
 	<artifactId>jerkin_project_sys_api</artifactId>
 	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 
-	<name>jerkin_project_sys_api</name>
+	<name>auto-mule-deploy</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,8 +23,8 @@
 	</properties>
 	<distributionManagement>
 		<repository>
-			<id>anypoint-exchange</id>
-			<name>Anypoint Exchange</name>
+			<id>exchange-repository</id>
+			<name>Exchange Repository</name>
 			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/890e72fd-6fba-4cc1-9404-681bca0af50d/maven</url>
 		</repository>
 	</distributionManagement>
