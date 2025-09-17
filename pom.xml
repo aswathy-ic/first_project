@@ -47,8 +47,9 @@
 						<provider>MC</provider>
 						<target>Cloudhub-US-East-2</target>
 						<muleVersion>${app.runtime}</muleVersion>
-						<username>AswathySree_ic</username>
-						<password>Aswa@2002</password>
+						<connectedAppClientId>9575264e3629426697b0ee0b7d3a02ad</connectedAppClientId>
+						<connectedAppClientSecret>adaD7cC9D86D4628a2429017F1557374</connectedAppClientSecret>
+						<connectedAppGrantType>client_credentials</connectedAppGrantType>
 						<environment>${anypoint.env}</environment>
 						<applicationName>${app.name}</applicationName>
 						<businessGroup>${business}</businessGroup>
