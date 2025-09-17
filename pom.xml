@@ -5,11 +5,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>890e72fd-6fba-4cc1-9404-681bca0af50d</groupId>
-	<artifactId>auto-mule-deploy</artifactId>
+	<artifactId>jerkin_project_sys_api</artifactId>
 	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 
-	<name>auto-mule-deploy</name>
+	<name>jerkin_project_sys_api</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
